@@ -1,0 +1,249 @@
+/* web font */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body {
+	font-family: 'Nanum Gothic', serif;
+}
+/* contents above todaystock cards */
+.bigs-about-frame {
+    position: relative;
+}
+.btn-kakao {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 230px;
+    height: 80px;
+}
+.btn-youtube {
+    position: absolute;
+    top: 0;
+    right: 230px;
+    width: 200px;
+    height: 80px;
+}
+.btn-todaystocks {
+    width: 400px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.best-card-frame {
+    position: relative;
+}
+.best-card {
+    display: inline-block;
+    position: absolute;
+}
+.best-card div {
+    height: 25px;
+    font-weight: bolder;
+}
+.best-card.week {
+    color: white;
+    top: 55px;
+    right: 20px;
+}
+.best-card.month {
+    color: black;
+    bottom: 0;
+    left: 20px;
+}
+.earning-rate-frame {
+    position: relative;
+}
+.earning-rate {
+    position: absolute;
+    top: 10%;
+    width: 190px;
+    text-align: center;
+    color: red;
+    font-size: 30px;
+    font-weight: 900;
+}
+.earning-rate-frame.right .earning-rate {
+    right: 0;
+}
+.earning-rate-frame.center .earning-rate {
+    left: 30px;
+}
+.earning-rate-frame.left .earning-rate {
+    left: 0;
+}
+/* flip effect */
+/* entire container, keeps perspective */
+.card-container {
+    display: inline-block;
+    width: 190px;
+    margin: 0 auto;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d; 
+    -ms-transform-style: preserve-3d; 
+    transform-style: preserve-3d; 
+}
+.card img {
+    max-width: 100%;
+}
+.card-info {
+    position: absolute;
+    width: 190px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+.card-info.number {
+    top: 25%;
+    font-size: 40px;
+}
+.card-info.category {
+    top: 70%;
+    font-size: 25px;
+}
+.card-info.keyword {
+    top: 47%;
+}
+.card-info.name {
+    top: 5%;
+    font-size: 25px;
+}
+.card-info.star {
+    top: 23%;
+    font-size: 20px;
+}
+.card-info.period {
+    top: 55%;
+}
+.card-info.buy-price {
+    right: 0;
+    top: 70%;
+    font-size: 12px;
+    width: 130px;
+}
+.card-info.dead-price {
+    right: 0;
+    top: 77.3%;
+    font-size: 12px;
+    width: 130px;
+}
+.card-wrapper {
+    position: relative;
+    -webkit-transition: .6s;
+    transition: .6s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d; 
+}
+/* flip class added with javascript on click */
+.card-container.flip .front {
+    /* For IE10 you have to animate each face separately. */
+    /* Isnt great on low end devices because */
+    /* they can animate at different times */
+    /* IE9 does not support CSS animations */
+    -webkit-transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+.card-container.flip .back {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.card-wrapper .front,
+.card-wrapper .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -ms-transition: .6s;
+    -webkit-transition: .6s;
+    transition: .6s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d; 
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.card-wrapper .front {
+    /* z-index so front card stays above back */
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.card-wrapper .back {
+    background-color: #be4c39;
+    /* back, initially hidden */
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+/* -----------------------------* /
+/* shine effect */
+.card.front,
+.card.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+/*    height: 100%; */
+    transition: .5s;
+    overflow: hidden; 
+    cursor: pointer;
+}
+.card.front:before,
+.card.back:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    transition: .5s;
+}
+.card.front:hover:before,
+.card.back:hover:before{
+    left: 100%;
+}
+
+/* -----------------------------* /
+/* when card flipped, graph showed */
+.chart-section .html-embed-3  {
+	display: none;
+}
+.chart-section.show .html-embed-3  {
+	display: block;
+}
+/* when card flipped, checked label showed */
+/* url -> checked-icon.png
+.card-info.checked {
+    top: 0px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/checked-icon.png);ㅋㅋㅋ
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+} */
+/* url -> checked-banner */
+.card-info.checked {
+    top: 0px;
+    left: 0px;
+    width: 155px;
+    height: 155px;
+    background-image: url(../images/checked-banner.png);
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+}
+.checked {
+    display: none;
+}
+.checked.show  {
+    display: block;
+}
