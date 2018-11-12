@@ -93,6 +93,9 @@ body {
     color: white;
     font-weight: bold;
 }
+.card-info.realtime {
+    top: 0;
+}
 .card-info.number {
     top: 25%;
     font-size: 40px;
@@ -126,6 +129,12 @@ body {
     top: 77.3%;
     font-size: 12px;
     width: 130px;
+}
+.card-info.read-more {
+    top: 82%;
+    width: 150px;
+    padding-left: 18px;
+    padding-right: 22px;
 }
 .card-wrapper {
     position: relative;
