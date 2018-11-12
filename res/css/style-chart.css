@@ -1,0 +1,30 @@
+.chart-frame {
+    background-color: rgba(32,159,244,.6);
+    border-radius: 20px;
+}
+.stock-chart-container {
+    height: 350px;
+    width: 600px;
+    /* background-color: rgba(32,159,244,.4); */
+}
+#StockRadar {
+    position:absolute;
+    height: 350px;
+    width: 600px;
+}
+.info {
+    width: 320px;
+}
+.info.title {
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.info.content.name {
+    font-weight: bold;
+    font-size: 20px;
+}
+.info.content.detail {
+    height: 80px;
+    overflow: auto;
+}

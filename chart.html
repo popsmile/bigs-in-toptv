@@ -1,9 +1,29 @@
 <html>
     <head>
         <link href="./res/css/style-chart.css" rel="stylesheet" type="text/css">
+        <script src="./res/js/stockchart.js" type="text/javascript"></script>
     </head>
 
-    <body>
-        <!-- 종목 분석 더보기 클릭시 랜딩되는 팝업창 -->
+    <body onload="javascript:showScore()">
+        <div class="chart-frame">
+            <table width="950" border="0" cellspacing="0" cellpadding="0">
+                <tr height="350">
+                    <td width="600">
+                        <div class="stock-chart-container">
+                            <canvas id="StockRadar"></canvas>
+                        </div>
+                    </td>
+                    <td class="info-wrapper" width="350">
+                        <div class="info title">오늘의 빅스 추천 종목</div>
+                        <div class="info content name">모나리자</div>
+                        <div class="info content">치매 관련주</div>
+                        <div class="info title">동일테마 종목</div>
+                        <div class="info content">동일테마, 동일테마</div>
+                        <div class="info title">종목 특이사항</div>
+                        <div class="info content detail">위생용품 제조 및 판매업체. 성인용(노인치매용 등) 기저귀 판매.</div></td>
+                </tr>
+            </table>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     </body>
 </html>
