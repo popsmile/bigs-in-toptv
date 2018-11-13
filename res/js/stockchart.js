@@ -14,11 +14,11 @@ function showScore() {
     // var growth_score = Number(chartscore[9].innerHTML); // Number(document.getElementById('secret1_score').textContent);
     // var secret_score = Number(chartscore[11].innerHTML); // Number(document.getElementById('secret2_score').textContent);
     
-    var bigs_score = 80; 
-    var gain_score = 75;
-    var theme_score = 77;
-    var finance_score = 82;
-    var growth_score = 97;
+    var bigs_score = 72.4; 
+    var gain_score = 86.3;
+    var theme_score = 80;
+    var finance_score = 76.7;
+    var growth_score = 70;
     var secret_score = 88;
     var color = Chart.helpers.color;
     var min_value = 60;
